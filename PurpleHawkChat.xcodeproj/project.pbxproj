@@ -1,0 +1,545 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		547ED1931DD86196006C9B20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547ED1921DD86196006C9B20 /* AppDelegate.swift */; };
+		547ED1951DD86196006C9B20 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547ED1941DD86196006C9B20 /* ViewController.swift */; };
+		547ED1981DD86196006C9B20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 547ED1961DD86196006C9B20 /* Main.storyboard */; };
+		547ED19B1DD86196006C9B20 /* PurpleHawkChat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 547ED1991DD86196006C9B20 /* PurpleHawkChat.xcdatamodeld */; };
+		547ED19D1DD86196006C9B20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 547ED19C1DD86196006C9B20 /* Assets.xcassets */; };
+		547ED1A01DD86196006C9B20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 547ED19E1DD86196006C9B20 /* LaunchScreen.storyboard */; };
+		547ED1AB1DD86196006C9B20 /* PurpleHawkChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547ED1AA1DD86196006C9B20 /* PurpleHawkChatTests.swift */; };
+		547ED1B61DD86196006C9B20 /* PurpleHawkChatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547ED1B51DD86196006C9B20 /* PurpleHawkChatUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		547ED1A71DD86196006C9B20 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 547ED1871DD86196006C9B20 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 547ED18E1DD86196006C9B20;
+			remoteInfo = PurpleHawkChat;
+		};
+		547ED1B21DD86196006C9B20 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 547ED1871DD86196006C9B20 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 547ED18E1DD86196006C9B20;
+			remoteInfo = PurpleHawkChat;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		547ED18F1DD86196006C9B20 /* PurpleHawkChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PurpleHawkChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		547ED1921DD86196006C9B20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		547ED1941DD86196006C9B20 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		547ED1971DD86196006C9B20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		547ED19A1DD86196006C9B20 /* PurpleHawkChat.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PurpleHawkChat.xcdatamodel; sourceTree = "<group>"; };
+		547ED19C1DD86196006C9B20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		547ED19F1DD86196006C9B20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		547ED1A11DD86196006C9B20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		547ED1A61DD86196006C9B20 /* PurpleHawkChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PurpleHawkChatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		547ED1AA1DD86196006C9B20 /* PurpleHawkChatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurpleHawkChatTests.swift; sourceTree = "<group>"; };
+		547ED1AC1DD86196006C9B20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		547ED1B11DD86196006C9B20 /* PurpleHawkChatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PurpleHawkChatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		547ED1B51DD86196006C9B20 /* PurpleHawkChatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurpleHawkChatUITests.swift; sourceTree = "<group>"; };
+		547ED1B71DD86196006C9B20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		547ED18C1DD86196006C9B20 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		547ED1A31DD86196006C9B20 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		547ED1AE1DD86196006C9B20 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		547ED1861DD86196006C9B20 = {
+			isa = PBXGroup;
+			children = (
+				547ED1911DD86196006C9B20 /* PurpleHawkChat */,
+				547ED1A91DD86196006C9B20 /* PurpleHawkChatTests */,
+				547ED1B41DD86196006C9B20 /* PurpleHawkChatUITests */,
+				547ED1901DD86196006C9B20 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		547ED1901DD86196006C9B20 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				547ED18F1DD86196006C9B20 /* PurpleHawkChat.app */,
+				547ED1A61DD86196006C9B20 /* PurpleHawkChatTests.xctest */,
+				547ED1B11DD86196006C9B20 /* PurpleHawkChatUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		547ED1911DD86196006C9B20 /* PurpleHawkChat */ = {
+			isa = PBXGroup;
+			children = (
+				547ED1921DD86196006C9B20 /* AppDelegate.swift */,
+				547ED1941DD86196006C9B20 /* ViewController.swift */,
+				547ED1961DD86196006C9B20 /* Main.storyboard */,
+				547ED19C1DD86196006C9B20 /* Assets.xcassets */,
+				547ED19E1DD86196006C9B20 /* LaunchScreen.storyboard */,
+				547ED1A11DD86196006C9B20 /* Info.plist */,
+				547ED1991DD86196006C9B20 /* PurpleHawkChat.xcdatamodeld */,
+			);
+			path = PurpleHawkChat;
+			sourceTree = "<group>";
+		};
+		547ED1A91DD86196006C9B20 /* PurpleHawkChatTests */ = {
+			isa = PBXGroup;
+			children = (
+				547ED1AA1DD86196006C9B20 /* PurpleHawkChatTests.swift */,
+				547ED1AC1DD86196006C9B20 /* Info.plist */,
+			);
+			path = PurpleHawkChatTests;
+			sourceTree = "<group>";
+		};
+		547ED1B41DD86196006C9B20 /* PurpleHawkChatUITests */ = {
+			isa = PBXGroup;
+			children = (
+				547ED1B51DD86196006C9B20 /* PurpleHawkChatUITests.swift */,
+				547ED1B71DD86196006C9B20 /* Info.plist */,
+			);
+			path = PurpleHawkChatUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		547ED18E1DD86196006C9B20 /* PurpleHawkChat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 547ED1BA1DD86196006C9B20 /* Build configuration list for PBXNativeTarget "PurpleHawkChat" */;
+			buildPhases = (
+				547ED18B1DD86196006C9B20 /* Sources */,
+				547ED18C1DD86196006C9B20 /* Frameworks */,
+				547ED18D1DD86196006C9B20 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PurpleHawkChat;
+			productName = PurpleHawkChat;
+			productReference = 547ED18F1DD86196006C9B20 /* PurpleHawkChat.app */;
+			productType = "com.apple.product-type.application";
+		};
+		547ED1A51DD86196006C9B20 /* PurpleHawkChatTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 547ED1BD1DD86196006C9B20 /* Build configuration list for PBXNativeTarget "PurpleHawkChatTests" */;
+			buildPhases = (
+				547ED1A21DD86196006C9B20 /* Sources */,
+				547ED1A31DD86196006C9B20 /* Frameworks */,
+				547ED1A41DD86196006C9B20 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				547ED1A81DD86196006C9B20 /* PBXTargetDependency */,
+			);
+			name = PurpleHawkChatTests;
+			productName = PurpleHawkChatTests;
+			productReference = 547ED1A61DD86196006C9B20 /* PurpleHawkChatTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		547ED1B01DD86196006C9B20 /* PurpleHawkChatUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 547ED1C01DD86196006C9B20 /* Build configuration list for PBXNativeTarget "PurpleHawkChatUITests" */;
+			buildPhases = (
+				547ED1AD1DD86196006C9B20 /* Sources */,
+				547ED1AE1DD86196006C9B20 /* Frameworks */,
+				547ED1AF1DD86196006C9B20 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				547ED1B31DD86196006C9B20 /* PBXTargetDependency */,
+			);
+			name = PurpleHawkChatUITests;
+			productName = PurpleHawkChatUITests;
+			productReference = 547ED1B11DD86196006C9B20 /* PurpleHawkChatUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		547ED1871DD86196006C9B20 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Abhinay Varma";
+				TargetAttributes = {
+					547ED18E1DD86196006C9B20 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+					};
+					547ED1A51DD86196006C9B20 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 547ED18E1DD86196006C9B20;
+					};
+					547ED1B01DD86196006C9B20 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 547ED18E1DD86196006C9B20;
+					};
+				};
+			};
+			buildConfigurationList = 547ED18A1DD86196006C9B20 /* Build configuration list for PBXProject "PurpleHawkChat" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 547ED1861DD86196006C9B20;
+			productRefGroup = 547ED1901DD86196006C9B20 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				547ED18E1DD86196006C9B20 /* PurpleHawkChat */,
+				547ED1A51DD86196006C9B20 /* PurpleHawkChatTests */,
+				547ED1B01DD86196006C9B20 /* PurpleHawkChatUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		547ED18D1DD86196006C9B20 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				547ED1A01DD86196006C9B20 /* LaunchScreen.storyboard in Resources */,
+				547ED19D1DD86196006C9B20 /* Assets.xcassets in Resources */,
+				547ED1981DD86196006C9B20 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		547ED1A41DD86196006C9B20 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		547ED1AF1DD86196006C9B20 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		547ED18B1DD86196006C9B20 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				547ED1951DD86196006C9B20 /* ViewController.swift in Sources */,
+				547ED19B1DD86196006C9B20 /* PurpleHawkChat.xcdatamodeld in Sources */,
+				547ED1931DD86196006C9B20 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		547ED1A21DD86196006C9B20 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				547ED1AB1DD86196006C9B20 /* PurpleHawkChatTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		547ED1AD1DD86196006C9B20 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				547ED1B61DD86196006C9B20 /* PurpleHawkChatUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		547ED1A81DD86196006C9B20 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 547ED18E1DD86196006C9B20 /* PurpleHawkChat */;
+			targetProxy = 547ED1A71DD86196006C9B20 /* PBXContainerItemProxy */;
+		};
+		547ED1B31DD86196006C9B20 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 547ED18E1DD86196006C9B20 /* PurpleHawkChat */;
+			targetProxy = 547ED1B21DD86196006C9B20 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		547ED1961DD86196006C9B20 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				547ED1971DD86196006C9B20 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		547ED19E1DD86196006C9B20 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				547ED19F1DD86196006C9B20 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		547ED1B81DD86196006C9B20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		547ED1B91DD86196006C9B20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		547ED1BB1DD86196006C9B20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PurpleHawkChat/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = abhi.PurpleHawkChat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		547ED1BC1DD86196006C9B20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PurpleHawkChat/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = abhi.PurpleHawkChat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		547ED1BE1DD86196006C9B20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PurpleHawkChatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = abhi.PurpleHawkChatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PurpleHawkChat.app/PurpleHawkChat";
+			};
+			name = Debug;
+		};
+		547ED1BF1DD86196006C9B20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PurpleHawkChatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = abhi.PurpleHawkChatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PurpleHawkChat.app/PurpleHawkChat";
+			};
+			name = Release;
+		};
+		547ED1C11DD86196006C9B20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = PurpleHawkChatUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = abhi.PurpleHawkChatUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = PurpleHawkChat;
+			};
+			name = Debug;
+		};
+		547ED1C21DD86196006C9B20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = PurpleHawkChatUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = abhi.PurpleHawkChatUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = PurpleHawkChat;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		547ED18A1DD86196006C9B20 /* Build configuration list for PBXProject "PurpleHawkChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				547ED1B81DD86196006C9B20 /* Debug */,
+				547ED1B91DD86196006C9B20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		547ED1BA1DD86196006C9B20 /* Build configuration list for PBXNativeTarget "PurpleHawkChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				547ED1BB1DD86196006C9B20 /* Debug */,
+				547ED1BC1DD86196006C9B20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		547ED1BD1DD86196006C9B20 /* Build configuration list for PBXNativeTarget "PurpleHawkChatTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				547ED1BE1DD86196006C9B20 /* Debug */,
+				547ED1BF1DD86196006C9B20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		547ED1C01DD86196006C9B20 /* Build configuration list for PBXNativeTarget "PurpleHawkChatUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				547ED1C11DD86196006C9B20 /* Debug */,
+				547ED1C21DD86196006C9B20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		547ED1991DD86196006C9B20 /* PurpleHawkChat.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				547ED19A1DD86196006C9B20 /* PurpleHawkChat.xcdatamodel */,
+			);
+			currentVersion = 547ED19A1DD86196006C9B20 /* PurpleHawkChat.xcdatamodel */;
+			path = PurpleHawkChat.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 547ED1871DD86196006C9B20 /* Project object */;
+}
