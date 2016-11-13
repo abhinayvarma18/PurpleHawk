@@ -8,13 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		547ED1931DD86196006C9B20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547ED1921DD86196006C9B20 /* AppDelegate.swift */; };
-		547ED1951DD86196006C9B20 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547ED1941DD86196006C9B20 /* ViewController.swift */; };
 		547ED1981DD86196006C9B20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 547ED1961DD86196006C9B20 /* Main.storyboard */; };
 		547ED19B1DD86196006C9B20 /* PurpleHawkChat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 547ED1991DD86196006C9B20 /* PurpleHawkChat.xcdatamodeld */; };
 		547ED19D1DD86196006C9B20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 547ED19C1DD86196006C9B20 /* Assets.xcassets */; };
 		547ED1A01DD86196006C9B20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 547ED19E1DD86196006C9B20 /* LaunchScreen.storyboard */; };
 		547ED1AB1DD86196006C9B20 /* PurpleHawkChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547ED1AA1DD86196006C9B20 /* PurpleHawkChatTests.swift */; };
 		547ED1B61DD86196006C9B20 /* PurpleHawkChatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547ED1B51DD86196006C9B20 /* PurpleHawkChatUITests.swift */; };
+		547ED1C41DD8641E006C9B20 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547ED1C31DD8641E006C9B20 /* LoginViewController.swift */; };
+		547ED1C61DD864CD006C9B20 /* RoomListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547ED1C51DD864CD006C9B20 /* RoomListTableViewController.swift */; };
+		547ED1C81DD86659006C9B20 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 547ED1C71DD86659006C9B20 /* GoogleService-Info.plist */; };
+		547ED1CA1DD8703D006C9B20 /* ChatRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547ED1C91DD8703D006C9B20 /* ChatRoom.swift */; };
+		547ED1CC1DD87267006C9B20 /* StaticTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547ED1CB1DD87267006C9B20 /* StaticTableViewCell.swift */; };
+		547ED1CE1DD87716006C9B20 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547ED1CD1DD87716006C9B20 /* ChatViewController.swift */; };
+		E0D610EC3801978BDC77902D /* Pods_PurpleHawkChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC86F8987477144AD719E851 /* Pods_PurpleHawkChat.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +43,6 @@
 /* Begin PBXFileReference section */
 		547ED18F1DD86196006C9B20 /* PurpleHawkChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PurpleHawkChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		547ED1921DD86196006C9B20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		547ED1941DD86196006C9B20 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		547ED1971DD86196006C9B20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		547ED19A1DD86196006C9B20 /* PurpleHawkChat.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PurpleHawkChat.xcdatamodel; sourceTree = "<group>"; };
 		547ED19C1DD86196006C9B20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +54,15 @@
 		547ED1B11DD86196006C9B20 /* PurpleHawkChatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PurpleHawkChatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		547ED1B51DD86196006C9B20 /* PurpleHawkChatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurpleHawkChatUITests.swift; sourceTree = "<group>"; };
 		547ED1B71DD86196006C9B20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		547ED1C31DD8641E006C9B20 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ../LoginViewController.swift; sourceTree = "<group>"; };
+		547ED1C51DD864CD006C9B20 /* RoomListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomListTableViewController.swift; sourceTree = "<group>"; };
+		547ED1C71DD86659006C9B20 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		547ED1C91DD8703D006C9B20 /* ChatRoom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatRoom.swift; sourceTree = "<group>"; };
+		547ED1CB1DD87267006C9B20 /* StaticTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticTableViewCell.swift; sourceTree = "<group>"; };
+		547ED1CD1DD87716006C9B20 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		5B2AEEA61BA243690B9AABB9 /* Pods-PurpleHawkChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PurpleHawkChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-PurpleHawkChat/Pods-PurpleHawkChat.release.xcconfig"; sourceTree = "<group>"; };
+		EC86F8987477144AD719E851 /* Pods_PurpleHawkChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PurpleHawkChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F76A0C0AC5CEE4E9494AC5CB /* Pods-PurpleHawkChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PurpleHawkChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PurpleHawkChat/Pods-PurpleHawkChat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0D610EC3801978BDC77902D /* Pods_PurpleHawkChat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +91,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		17837FB17CA9B18FFCC9510E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F76A0C0AC5CEE4E9494AC5CB /* Pods-PurpleHawkChat.debug.xcconfig */,
+				5B2AEEA61BA243690B9AABB9 /* Pods-PurpleHawkChat.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		547ED1861DD86196006C9B20 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +107,8 @@
 				547ED1A91DD86196006C9B20 /* PurpleHawkChatTests */,
 				547ED1B41DD86196006C9B20 /* PurpleHawkChatUITests */,
 				547ED1901DD86196006C9B20 /* Products */,
+				17837FB17CA9B18FFCC9510E /* Pods */,
+				FB7BF61AE84B1EE15BBB4B19 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,11 +126,16 @@
 			isa = PBXGroup;
 			children = (
 				547ED1921DD86196006C9B20 /* AppDelegate.swift */,
-				547ED1941DD86196006C9B20 /* ViewController.swift */,
+				547ED1C31DD8641E006C9B20 /* LoginViewController.swift */,
+				547ED1C51DD864CD006C9B20 /* RoomListTableViewController.swift */,
+				547ED1CD1DD87716006C9B20 /* ChatViewController.swift */,
+				547ED1CB1DD87267006C9B20 /* StaticTableViewCell.swift */,
+				547ED1C91DD8703D006C9B20 /* ChatRoom.swift */,
 				547ED1961DD86196006C9B20 /* Main.storyboard */,
 				547ED19C1DD86196006C9B20 /* Assets.xcassets */,
 				547ED19E1DD86196006C9B20 /* LaunchScreen.storyboard */,
 				547ED1A11DD86196006C9B20 /* Info.plist */,
+				547ED1C71DD86659006C9B20 /* GoogleService-Info.plist */,
 				547ED1991DD86196006C9B20 /* PurpleHawkChat.xcdatamodeld */,
 			);
 			path = PurpleHawkChat;
@@ -128,6 +159,14 @@
 			path = PurpleHawkChatUITests;
 			sourceTree = "<group>";
 		};
+		FB7BF61AE84B1EE15BBB4B19 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EC86F8987477144AD719E851 /* Pods_PurpleHawkChat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +174,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 547ED1BA1DD86196006C9B20 /* Build configuration list for PBXNativeTarget "PurpleHawkChat" */;
 			buildPhases = (
+				5AB90B55D6030DADD12FEE24 /* [CP] Check Pods Manifest.lock */,
 				547ED18B1DD86196006C9B20 /* Sources */,
 				547ED18C1DD86196006C9B20 /* Frameworks */,
 				547ED18D1DD86196006C9B20 /* Resources */,
+				4FE055961438C05F3B9FE7AC /* [CP] Embed Pods Frameworks */,
+				4FDA7B76D228D849E328AD1B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -235,6 +277,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				547ED1C81DD86659006C9B20 /* GoogleService-Info.plist in Resources */,
 				547ED1A01DD86196006C9B20 /* LaunchScreen.storyboard in Resources */,
 				547ED19D1DD86196006C9B20 /* Assets.xcassets in Resources */,
 				547ED1981DD86196006C9B20 /* Main.storyboard in Resources */,
@@ -257,12 +300,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4FDA7B76D228D849E328AD1B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PurpleHawkChat/Pods-PurpleHawkChat-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4FE055961438C05F3B9FE7AC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PurpleHawkChat/Pods-PurpleHawkChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5AB90B55D6030DADD12FEE24 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		547ED18B1DD86196006C9B20 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				547ED1951DD86196006C9B20 /* ViewController.swift in Sources */,
+				547ED1C61DD864CD006C9B20 /* RoomListTableViewController.swift in Sources */,
+				547ED1CC1DD87267006C9B20 /* StaticTableViewCell.swift in Sources */,
+				547ED1CA1DD8703D006C9B20 /* ChatRoom.swift in Sources */,
+				547ED1CE1DD87716006C9B20 /* ChatViewController.swift in Sources */,
+				547ED1C41DD8641E006C9B20 /* LoginViewController.swift in Sources */,
 				547ED19B1DD86196006C9B20 /* PurpleHawkChat.xcdatamodeld in Sources */,
 				547ED1931DD86196006C9B20 /* AppDelegate.swift in Sources */,
 			);
@@ -414,6 +509,7 @@
 		};
 		547ED1BB1DD86196006C9B20 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F76A0C0AC5CEE4E9494AC5CB /* Pods-PurpleHawkChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PurpleHawkChat/Info.plist;
@@ -426,6 +522,7 @@
 		};
 		547ED1BC1DD86196006C9B20 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B2AEEA61BA243690B9AABB9 /* Pods-PurpleHawkChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PurpleHawkChat/Info.plist;
@@ -509,6 +606,7 @@
 				547ED1BC1DD86196006C9B20 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		547ED1BD1DD86196006C9B20 /* Build configuration list for PBXNativeTarget "PurpleHawkChatTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +615,7 @@
 				547ED1BF1DD86196006C9B20 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		547ED1C01DD86196006C9B20 /* Build configuration list for PBXNativeTarget "PurpleHawkChatUITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +624,7 @@
 				547ED1C21DD86196006C9B20 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
