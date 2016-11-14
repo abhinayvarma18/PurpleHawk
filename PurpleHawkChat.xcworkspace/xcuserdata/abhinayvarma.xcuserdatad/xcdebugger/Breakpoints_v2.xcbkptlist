@@ -868,11 +868,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PurpleHawkChat/ChatViewController.swift"
-            timestampString = "500831576.931618"
+            timestampString = "500851380.742009"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "158"
-            endingLineNumber = "158"
+            startingLineNumber = "159"
+            endingLineNumber = "159"
             landmarkName = "removeUser(_:)"
             landmarkType = "7">
             <Locations>
@@ -916,11 +916,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PurpleHawkChat/ChatViewController.swift"
-            timestampString = "500831576.931618"
+            timestampString = "500851380.742009"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "158"
-            endingLineNumber = "158"
+            startingLineNumber = "159"
+            endingLineNumber = "159"
             landmarkName = "removeUser(_:)"
             landmarkType = "7">
             <Locations>
@@ -932,11 +932,11 @@
                   moduleName = "PurpleHawkChat"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/abhinayvarma/Desktop/iosProjects/PurpleHawkChat/PurpleHawkChat/ChatViewController.swift"
-                  timestampString = "500845644.025636"
+                  timestampString = "500855802.895164"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "158"
-                  endingLineNumber = "158"
+                  startingLineNumber = "159"
+                  endingLineNumber = "159"
                   offsetFromSymbolStart = "508">
                </Location>
                <Location
@@ -947,11 +947,11 @@
                   moduleName = "PurpleHawkChat"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/abhinayvarma/Desktop/iosProjects/PurpleHawkChat/PurpleHawkChat/ChatViewController.swift"
-                  timestampString = "500845644.028896"
+                  timestampString = "500855802.898032"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "159"
-                  endingLineNumber = "159"
+                  startingLineNumber = "160"
+                  endingLineNumber = "160"
                   offsetFromSymbolStart = "23">
                </Location>
             </Locations>
@@ -964,11 +964,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PurpleHawkChat/ChatViewController.swift"
-            timestampString = "500829739.486085"
+            timestampString = "500851380.742009"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "157"
-            endingLineNumber = "157"
+            startingLineNumber = "158"
+            endingLineNumber = "158"
             landmarkName = "removeUser(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -980,29 +980,45 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PurpleHawkChat/ModelViewController.swift"
-            timestampString = "500845535.59841"
+            timestampString = "500854077.883425"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "CheckUser(_:)"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PurpleHawkChat/ModelViewController.swift"
-            timestampString = "500845535.59841"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "CheckUser(_:)"
-            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PurpleHawkChat.ModelViewController.(viewDidLoad () -&gt; ()).(closure #1)"
+                  moduleName = "PurpleHawkChat"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/abhinayvarma/Desktop/iosProjects/PurpleHawkChat/PurpleHawkChat/ModelViewController.swift"
+                  timestampString = "500855802.902393"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "531">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PurpleHawkChat.ModelViewController.(viewDidLoad () -&gt; ()).(closure #1).(closure #1)"
+                  moduleName = "PurpleHawkChat"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/abhinayvarma/Desktop/iosProjects/PurpleHawkChat/PurpleHawkChat/ModelViewController.swift"
+                  timestampString = "500855802.904379"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "27">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1011,13 +1027,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "PurpleHawkChat/ModelViewController.swift"
-            timestampString = "500846319.144985"
+            filePath = "PurpleHawkChat/ChatViewController.swift"
+            timestampString = "500851380.742009"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
-            landmarkName = "CheckUser(_:)"
+            startingLineNumber = "152"
+            endingLineNumber = "152"
+            landmarkName = "AddUser(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1028,45 +1044,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PurpleHawkChat/ModelViewController.swift"
-            timestampString = "500844530.56274"
+            timestampString = "500854077.883425"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "CheckUser(_:)"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "numberOfSections(in:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "PurpleHawkChat.ModelViewController.CheckUser (Any) -&gt; ()"
-                  moduleName = "PurpleHawkChat"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/abhinayvarma/Desktop/iosProjects/PurpleHawkChat/PurpleHawkChat/ModelViewController.swift"
-                  timestampString = "500845644.042469"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
-                  offsetFromSymbolStart = "23">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "PurpleHawkChat.ModelViewController.(CheckUser (Any) -&gt; ()).(closure #1)"
-                  moduleName = "PurpleHawkChat"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/abhinayvarma/Desktop/iosProjects/PurpleHawkChat/PurpleHawkChat/ModelViewController.swift"
-                  timestampString = "500845644.047088"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "30"
-                  endingLineNumber = "30"
-                  offsetFromSymbolStart = "32">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1076,12 +1060,44 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PurpleHawkChat/ModelViewController.swift"
-            timestampString = "500845535.59841"
+            timestampString = "500854077.883425"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "CheckUser(_:)"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "tableView(_:numberOfRowsInSection:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PurpleHawkChat/ModelViewController.swift"
+            timestampString = "500854077.883425"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PurpleHawkChat/ModelViewController.swift"
+            timestampString = "500855436.145562"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

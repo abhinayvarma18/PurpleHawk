@@ -149,9 +149,10 @@ class ChatViewController: JSQMessagesViewController {
         }
     }
     
-    @IBAction func addUser(_ sender: Any) {
-       
+    @IBAction func AddUser(_ sender: Any) {
+        self.performSegue(withIdentifier: "AddUser", sender: nil)
     }
+    
     @IBAction func removeUser(_ sender: Any) {
         let alertController = UIAlertController( title:"Gender:", message:nil,preferredStyle:UIAlertControllerStyle.alert)
         let userRef = channelRef!.child("users")
@@ -174,9 +175,12 @@ class ChatViewController: JSQMessagesViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
-        let chatVc = segue.destination as! ModelViewController
+        let navVc = segue.destination as! UINavigationController
+        let chatVc = navVc.viewControllers.first as! ModelViewController
         chatVc.channelRef = channelRef
+        chatVc.email = email
     }
+    
     /*
     // MARK: - Navigation
 
