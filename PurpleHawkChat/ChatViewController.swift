@@ -13,31 +13,32 @@ import JSQMessagesViewController
 class ChatViewController: JSQMessagesViewController {
     var channelRef: FIRDatabaseReference?
     private var messages: [JSQMessage] = []
-    lazy var outgoingBubbleImageView: JSQMessagesBubbleImage = self.setupOutgoingBubble()
-    lazy var incomingBubbleImageView: JSQMessagesBubbleImage = self.setupIncomingBubble()
     private lazy var messageRef: FIRDatabaseReference = self.channelRef!.child("messages")
     private var newMessageRefHandle: FIRDatabaseHandle?
     private var updatedMessageRefHandle: FIRDatabaseHandle?
+    
+    lazy var outgoingBubbleImageView: JSQMessagesBubbleImage = self.setupOutgoingBubble()
+    lazy var incomingBubbleImageView: JSQMessagesBubbleImage = self.setupIncomingBubble()
+    
     var channel: ChatRoom? {
         didSet {
             title = channel?.name
         }
     }
 
+    var email: String!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.senderId = senderDisplayName
         observeMessages()
-        // Do any additional setup after loading the view.
         
-        // No avatars
         collectionView!.collectionViewLayout.incomingAvatarViewSize = CGSize.zero
         collectionView!.collectionViewLayout.outgoingAvatarViewSize = CGSize.zero
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, messageDataForItemAt indexPath: IndexPath!) -> JSQMessageData! {
@@ -50,7 +51,7 @@ class ChatViewController: JSQMessagesViewController {
     
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, messageBubbleImageDataForItemAt indexPath: IndexPath!) -> JSQMessageBubbleImageDataSource! {
         let message = messages[indexPath.item] // 1
-        if message.senderId == senderId { // 2
+        if message.senderId == email { // 2
             return outgoingBubbleImageView
         } else { // 3
             return incomingBubbleImageView
@@ -62,7 +63,7 @@ class ChatViewController: JSQMessagesViewController {
         
         let message = messages[indexPath.item]
         
-        if message.senderId == senderId { // 1
+        if message.senderId == email { // 1
             cell.textView?.textColor = UIColor.white // 2
         } else {
             cell.textView?.textColor = UIColor.black // 3
@@ -82,7 +83,7 @@ class ChatViewController: JSQMessagesViewController {
     override func collectionView(_ collectionView: JSQMessagesCollectionView?, attributedTextForMessageBubbleTopLabelAt indexPath: IndexPath!) -> NSAttributedString? {
         let message = messages[indexPath.item]
         switch message.senderId {
-        case senderId:
+        case self.email:
             return nil
         default:
             guard let senderDisplayName = message.senderDisplayName else {
@@ -91,6 +92,28 @@ class ChatViewController: JSQMessagesViewController {
             }
             return NSAttributedString(string: senderDisplayName)
         }
+    }
+    
+    override func didPressSend(_ button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: Date!) {
+        // 1
+        let itemRef = messageRef.childByAutoId()
+        
+        // 2
+        let messageItem = [
+            "senderName": self.senderDisplayName!,
+            "body": text!,
+            "senderId": email!
+            ]
+        
+        // 3
+        itemRef.setValue(messageItem)
+        
+        // 4
+        JSQSystemSoundPlayer.jsq_playMessageSentSound()
+        
+        // 5
+        finishSendingMessage()
+//        isTyping = false
     }
     
     private func setupOutgoingBubble() -> JSQMessagesBubbleImage {
@@ -108,40 +131,51 @@ class ChatViewController: JSQMessagesViewController {
         messageRef = channelRef!.child("messages")
         let messageQuery = messageRef.queryLimited(toLast:25)
         
-        // We can use the observe method to listen for new
-        // messages being written to the Firebase DB
         newMessageRefHandle = messageQuery.observe(.childAdded, with: { (snapshot) -> Void in
             let messageData = snapshot.value as! Dictionary<String, String>
             
-            if let id = messageData["senderName"] as String!, let name = messageData["senderName"] as String!, let text = messageData["body"] as String!, text.characters.count > 0 {
+            if let id = messageData["senderId"] as String!, let name = messageData["senderName"] as String!, let text = messageData["body"] as String!, text.characters.count > 0 {
                 self.addMessage(withId: id, name: name, text: text)
                 self.finishReceivingMessage()
             } else {
                 print("Error! Could not decode message data")
             }
         })
-        
-        // We can also use the observer method to listen for
-        // changes to existing messages.
-        // We use this to be notified when a photo has been stored
-        // to the Firebase Storage, so we can update the message data
-//        updatedMessageRefHandle = messageRef.observe(.childChanged, with: { (snapshot) in
-//            let key = snapshot.key
-//            let messageData = snapshot.value as! Dictionary<String, String>
-//            
-//            if let photoURL = messageData["photoURL"] as String! {
-//                // The photo has been updated.
-//                if let mediaItem = self.photoMessageMap[key] {
-//                    self.fetchImageDataAtURL(photoURL, forMediaItem: mediaItem, clearsPhotoMessageMapOnSuccessForKey: key)
-//                }
-//            }
-//        })
     }
     
     private func addMessage(withId id: String, name: String, text: String) {
         if let message = JSQMessage(senderId: id, displayName: name, text: text) {
             messages.append(message)
         }
+    }
+    
+    @IBAction func addUser(_ sender: Any) {
+       
+    }
+    @IBAction func removeUser(_ sender: Any) {
+        let alertController = UIAlertController( title:"Gender:", message:nil,preferredStyle:UIAlertControllerStyle.alert)
+        let userRef = channelRef!.child("users")
+        userRef.observe(.childAdded, with: { (snapshot) -> Void in
+            if(snapshot.value as! String! != self.email) {
+                let action = UIAlertAction(title:snapshot.key, style:UIAlertActionStyle.default,
+                                           handler:self.handleDelete)
+                alertController.addAction(action)
+            }
+        })
+        let cancelAction = UIAlertAction(title:"Cancel", style:UIAlertActionStyle.default,handler:nil)
+        alertController.addAction(cancelAction)
+        self.present(alertController, animated:true, completion:nil)
+    }
+    
+    func handleDelete(alert: UIAlertAction!) {
+        let deleteRef = channelRef!.child("users").child(alert.title!)
+        deleteRef.removeValue()
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        let chatVc = segue.destination as! ModelViewController
+        chatVc.channelRef = channelRef
     }
     /*
     // MARK: - Navigation

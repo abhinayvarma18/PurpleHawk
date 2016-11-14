@@ -29,6 +29,7 @@ class LoginViewController: UIViewController {
         let channelVc = navVc.viewControllers.first as! RoomListTableViewController
         
         channelVc.senderDisplayName = senderName?.text
+        channelVc.email = email?.text
     }
 
     @IBAction func loginAction(_ sender: Any) {

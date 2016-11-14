@@ -19,16 +19,30 @@ class RoomListTableViewController: UITableViewController {
         
         if let name = newChatroomTextField?.text {
             let newChannelRef = channelRef.child(name);
+            var emptyDict = [String : String]()
+            emptyDict[senderDisplayName] = email
             let channelItem = [
                 "id": name,
-                "users": "",
+                "users": emptyDict,
                 "admin": "",
                 "messages": ""
-            ]
+            ] as [String : Any]
+            
             newChannelRef.setValue(channelItem)
+//            let userRef = newChannelRef.child("users").child(senderDisplayName)
+//            userRef.setValue(email)
+           
+//            newChannelRef.setValue(channelItem) {(error,ref) in
+//                let userRef = newChannelRef.child("users").child(senderDisplayName)
+//                userRef.setValue(email)
+//                
+//            }
+            
+            
         }
     }
-    var senderDisplayName: String?
+    var senderDisplayName: String!
+    var email: String?
     private var chatRooms: [ChatRoom] = []
     private lazy var channelRef: FIRDatabaseReference = FIRDatabase.database().reference().child("ChatRooms")
     
@@ -52,8 +66,19 @@ class RoomListTableViewController: UITableViewController {
             let channelData = snapshot.value as! Dictionary<String, AnyObject>
             let id = snapshot.key
             if let name = channelData["id"] as! String!, name.characters.count > 0 {
-                self.chatRooms.append(ChatRoom(id: id, name: name))
-                self.tableView.reloadData()
+                
+                let users = channelData["users"] as! Dictionary<String, AnyObject>
+                var flag = false
+                for (key,value) in users {
+                    if(value as! String == self.email!){
+                        flag = true
+                    }
+                }
+                if(flag) {
+                    self.chatRooms.append(ChatRoom(id: id, name: name))
+                    self.tableView.reloadData()
+                    flag = false;
+                }
             } else {
                 print("Error! Could not decode channel data")
             }
@@ -115,6 +140,7 @@ class RoomListTableViewController: UITableViewController {
             let chatVc = segue.destination as! ChatViewController
             
             chatVc.senderDisplayName = senderDisplayName
+            chatVc.email = email
             chatVc.channelRef = channelRef.child(channel.id)
             chatVc.channel = channel
         }
