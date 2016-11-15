@@ -27,6 +27,7 @@
 		54A0D3511DDB6F1900712836 /* newbase.png in Resources */ = {isa = PBXBuildFile; fileRef = 54A0D3501DDB6F1900712836 /* newbase.png */; };
 		54A0D3531DDB6F6400712836 /* birds.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54A0D3521DDB6F6400712836 /* birds.jpg */; };
 		54A0D3551DDB707300712836 /* chat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54A0D3541DDB707300712836 /* chat.jpg */; };
+		54A0D3591DDB727E00712836 /* bubble.png in Resources */ = {isa = PBXBuildFile; fileRef = 54A0D3581DDB727E00712836 /* bubble.png */; };
 		E0D610EC3801978BDC77902D /* Pods_PurpleHawkChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC86F8987477144AD719E851 /* Pods_PurpleHawkChat.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +75,7 @@
 		54A0D3501DDB6F1900712836 /* newbase.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newbase.png; sourceTree = "<group>"; };
 		54A0D3521DDB6F6400712836 /* birds.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = birds.jpg; sourceTree = "<group>"; };
 		54A0D3541DDB707300712836 /* chat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chat.jpg; sourceTree = "<group>"; };
+		54A0D3581DDB727E00712836 /* bubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubble.png; sourceTree = "<group>"; };
 		5B2AEEA61BA243690B9AABB9 /* Pods-PurpleHawkChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PurpleHawkChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-PurpleHawkChat/Pods-PurpleHawkChat.release.xcconfig"; sourceTree = "<group>"; };
 		EC86F8987477144AD719E851 /* Pods_PurpleHawkChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PurpleHawkChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F76A0C0AC5CEE4E9494AC5CB /* Pods-PurpleHawkChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PurpleHawkChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PurpleHawkChat/Pods-PurpleHawkChat.debug.xcconfig"; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				547ED1961DD86196006C9B20 /* Main.storyboard */,
 				54A0D3521DDB6F6400712836 /* birds.jpg */,
 				54A0D3541DDB707300712836 /* chat.jpg */,
+				54A0D3581DDB727E00712836 /* bubble.png */,
 				54A0D3501DDB6F1900712836 /* newbase.png */,
 				54A0D34E1DDB6D9900712836 /* mynewbg.jpg */,
 				54A0D34C1DDB6D1E00712836 /* mybg.jpg */,
@@ -306,6 +309,7 @@
 				54A0D3551DDB707300712836 /* chat.jpg in Resources */,
 				54A0D3531DDB6F6400712836 /* birds.jpg in Resources */,
 				547ED1981DD86196006C9B20 /* Main.storyboard in Resources */,
+				54A0D3591DDB727E00712836 /* bubble.png in Resources */,
 				54A0D34F1DDB6D9900712836 /* mynewbg.jpg in Resources */,
 				54A0D3511DDB6F1900712836 /* newbase.png in Resources */,
 			);

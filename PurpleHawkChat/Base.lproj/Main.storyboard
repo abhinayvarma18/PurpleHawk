@@ -68,14 +68,23 @@
                                     <constraint firstAttribute="height" constant="190" id="398-ir-dM1"/>
                                 </constraints>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bubble.png" translatesAutoresizingMaskIntoConstraints="NO" id="xAt-2g-zae">
+                                <rect key="frame" x="16" y="519" width="172" height="89"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="172" id="3Zw-ey-JEi"/>
+                                    <constraint firstAttribute="height" constant="89" id="FO3-ay-7GE"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.05563247320653341" green="0.16480562838687851" blue="0.43407477532233507" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="jU6-Zz-h39" firstAttribute="top" secondItem="TXe-rB-GfL" secondAttribute="bottom" constant="37" id="3gq-m2-PR4"/>
                             <constraint firstItem="ZHj-v3-wvk" firstAttribute="leading" secondItem="N7o-Ep-ff1" secondAttribute="leadingMargin" constant="145" id="G29-tj-Pqj"/>
                             <constraint firstItem="ZHj-v3-wvk" firstAttribute="top" secondItem="jU6-Zz-h39" secondAttribute="bottom" constant="51" id="GCH-vw-dXX"/>
+                            <constraint firstItem="xAt-2g-zae" firstAttribute="leading" secondItem="N7o-Ep-ff1" secondAttribute="leadingMargin" id="W6E-ZD-oCV"/>
                             <constraint firstItem="TXe-rB-GfL" firstAttribute="top" secondItem="fKe-I2-T8A" secondAttribute="bottom" constant="120" id="XIe-4g-Hmr"/>
                             <constraint firstItem="89n-24-x4N" firstAttribute="leading" secondItem="N7o-Ep-ff1" secondAttribute="leading" id="Y6t-BU-Adp"/>
+                            <constraint firstItem="xAt-2g-zae" firstAttribute="top" secondItem="ZHj-v3-wvk" secondAttribute="bottom" constant="31" id="ZlC-9U-GIH"/>
                             <constraint firstAttribute="trailing" secondItem="fKe-I2-T8A" secondAttribute="trailing" id="Zvb-B7-8OA"/>
                             <constraint firstItem="jU6-Zz-h39" firstAttribute="leading" secondItem="N7o-Ep-ff1" secondAttribute="leadingMargin" constant="118" id="d1R-1v-PUR"/>
                             <constraint firstItem="TXe-rB-GfL" firstAttribute="leading" secondItem="N7o-Ep-ff1" secondAttribute="leadingMargin" constant="118" id="eNW-i1-67n"/>
@@ -299,6 +308,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bubble.png" width="400" height="400"/>
         <image name="chat.jpg" width="1292" height="1296"/>
         <image name="mybg.jpg" width="851" height="315"/>
     </resources>
