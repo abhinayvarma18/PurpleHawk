@@ -10,11 +10,12 @@ import UIKit
 import Firebase
 
 class LoginViewController: UIViewController {
-    @IBOutlet weak var email: UITextField!
-
-    @IBOutlet weak var senderName: UITextField!
     
+    @IBOutlet weak var email: UITextField!
+    @IBOutlet weak var senderName: UITextField!
     private lazy var userRef: FIRDatabaseReference = FIRDatabase.database().reference().child("users")
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,6 +26,8 @@ class LoginViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    //adding user to the firebase if it doesnot exist in firebase
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
         let navVc = segue.destination as! UINavigationController
@@ -49,6 +52,7 @@ class LoginViewController: UIViewController {
         
     }
 
+    //anonymous signin
     @IBAction func loginAction(_ sender: Any) {
         if senderName?.text != "" {
             FIRAuth.auth()?.signInAnonymously(completion: { (user, error) in
@@ -61,16 +65,5 @@ class LoginViewController: UIViewController {
             })
         }
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

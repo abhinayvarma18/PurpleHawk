@@ -23,20 +23,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TXe-rB-GfL">
-                                <rect key="frame" x="134" y="212" width="97" height="30"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.55000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chat.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="89n-24-x4N">
+                                <rect key="frame" x="0.0" y="190" width="375" height="479"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="479" id="5X4-2i-gBE"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TXe-rB-GfL">
+                                <rect key="frame" x="134" y="310" width="140" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="ELF-m8-UYS"/>
-                                    <constraint firstAttribute="width" constant="97" id="T4x-Ef-T83"/>
+                                    <constraint firstAttribute="width" constant="140" id="T4x-Ef-T83"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jU6-Zz-h39">
-                                <rect key="frame" x="134" y="279" width="97" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jU6-Zz-h39">
+                                <rect key="frame" x="134" y="377" width="140" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="97" id="MTh-rs-tzK"/>
+                                    <constraint firstAttribute="width" constant="140" id="MTh-rs-tzK"/>
                                     <constraint firstAttribute="height" constant="30" id="kWd-X7-46Z"/>
                                 </constraints>
                                 <nil key="textColor"/>
@@ -44,7 +50,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZHj-v3-wvk">
-                                <rect key="frame" x="149" y="360" width="69" height="30"/>
+                                <rect key="frame" x="161" y="458" width="69" height="30"/>
                                 <color key="backgroundColor" red="0.90845612050000002" green="0.56651890035805763" blue="0.30121208830857704" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="69" id="OI5-5R-DDc"/>
@@ -56,15 +62,27 @@
                                     <segue destination="wbe-Cb-YHi" kind="presentation" identifier="LoginToChat" id="fmm-M6-V65"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mybg.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="fKe-I2-T8A">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="190"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="190" id="398-ir-dM1"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.90768664710000002" green="0.90845612050000002" blue="0.81501370949999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.05563247320653341" green="0.16480562838687851" blue="0.43407477532233507" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="jU6-Zz-h39" firstAttribute="top" secondItem="TXe-rB-GfL" secondAttribute="bottom" constant="37" id="3gq-m2-PR4"/>
-                            <constraint firstItem="TXe-rB-GfL" firstAttribute="top" secondItem="dTe-6w-gmP" secondAttribute="bottom" constant="192" id="DG6-Vc-WIT"/>
-                            <constraint firstItem="ZHj-v3-wvk" firstAttribute="leading" secondItem="N7o-Ep-ff1" secondAttribute="leadingMargin" constant="133" id="G29-tj-Pqj"/>
+                            <constraint firstItem="ZHj-v3-wvk" firstAttribute="leading" secondItem="N7o-Ep-ff1" secondAttribute="leadingMargin" constant="145" id="G29-tj-Pqj"/>
                             <constraint firstItem="ZHj-v3-wvk" firstAttribute="top" secondItem="jU6-Zz-h39" secondAttribute="bottom" constant="51" id="GCH-vw-dXX"/>
+                            <constraint firstItem="TXe-rB-GfL" firstAttribute="top" secondItem="fKe-I2-T8A" secondAttribute="bottom" constant="120" id="XIe-4g-Hmr"/>
+                            <constraint firstItem="89n-24-x4N" firstAttribute="leading" secondItem="N7o-Ep-ff1" secondAttribute="leading" id="Y6t-BU-Adp"/>
+                            <constraint firstAttribute="trailing" secondItem="fKe-I2-T8A" secondAttribute="trailing" id="Zvb-B7-8OA"/>
                             <constraint firstItem="jU6-Zz-h39" firstAttribute="leading" secondItem="N7o-Ep-ff1" secondAttribute="leadingMargin" constant="118" id="d1R-1v-PUR"/>
                             <constraint firstItem="TXe-rB-GfL" firstAttribute="leading" secondItem="N7o-Ep-ff1" secondAttribute="leadingMargin" constant="118" id="eNW-i1-67n"/>
+                            <constraint firstItem="fKe-I2-T8A" firstAttribute="leading" secondItem="N7o-Ep-ff1" secondAttribute="leading" id="g57-tw-mHc"/>
+                            <constraint firstItem="89n-24-x4N" firstAttribute="top" secondItem="fKe-I2-T8A" secondAttribute="bottom" id="ghN-ei-esP"/>
+                            <constraint firstAttribute="trailing" secondItem="89n-24-x4N" secondAttribute="trailing" id="hFv-YO-A1B"/>
+                            <constraint firstItem="fKe-I2-T8A" firstAttribute="top" secondItem="N7o-Ep-ff1" secondAttribute="top" id="jwq-fn-pa3"/>
                         </constraints>
                     </view>
                     <connections>
@@ -83,13 +101,13 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="k0O-vS-kIw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.85239708420000004" green="0.81715934020000003" blue="0.29279107110000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Static" id="ahv-yz-g3U" customClass="StaticTableViewCell" customModule="PurpleHawkChat" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ahv-yz-g3U" id="Xir-Io-FDa">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="channelName" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cng-l9-WCM">
@@ -119,9 +137,10 @@
                                 <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2tS-u1-KDi" id="8Vb-p1-SOS">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.4336442968" green="0.43535779229999999" blue="0.45108778290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <segue destination="ZJ0-41-Rhv" kind="show" identifier="ShowChat" trigger="accessoryAction" id="C0n-cP-Bxd"/>
                                 </connections>
@@ -251,6 +270,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="KnU-4s-Rof"/>
                     <connections>
+                        <outlet property="invitedEmail" destination="RR7-nb-w7t" id="Osb-2k-zJI"/>
                         <outlet property="tableViewValue" destination="wOT-fM-z4Q" id="feP-64-hPp"/>
                         <outlet property="user" destination="RR7-nb-w7t" id="5Th-lH-d0F"/>
                     </connections>
@@ -278,6 +298,10 @@
             <point key="canvasLocation" x="845.60000000000002" y="-226.23688155922042"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="chat.jpg" width="1292" height="1296"/>
+        <image name="mybg.jpg" width="851" height="315"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="mSs-NB-MaN"/>
     </inferredMetricsTieBreakers>

@@ -15,6 +15,8 @@ class ModelViewController: UITableViewController,MFMailComposeViewControllerDele
     var email: String!
     private lazy var userRef: FIRDatabaseReference = FIRDatabase.database().reference().child("users")
     @IBOutlet weak var user: UITextField!
+    
+    @IBOutlet weak var invitedEmail: UITextField!
     private var valueArray: [String] = []
     private var keyArray: [String] = []
 
@@ -84,7 +86,7 @@ class ModelViewController: UITableViewController,MFMailComposeViewControllerDele
         email.mailComposeDelegate = self
         email.setSubject("Subject goes here")
         email.setMessageBody("Some example text", isHTML: false)
-        email.setToRecipients(["abhinaycpian@gmail.com"]) // the recipient email address
+        email.setToRecipients([(invitedEmail?.text)!]) // the recipient email address
         if MFMailComposeViewController.canSendMail() {
             present(email, animated: true, completion: nil)
         }
