@@ -156,7 +156,6 @@
                             <barButtonItem systemItem="add" id="lny-Hg-7sX">
                                 <connections>
                                     <action selector="AddUser:" destination="ZJ0-41-Rhv" id="PPO-qx-FJB"/>
-                                    <segue destination="CaX-6g-xUF" kind="presentation" identifier="AddUser" id="bJ2-OY-gbl"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem systemItem="edit" id="N0o-ro-mHu">
@@ -165,7 +164,17 @@
                                 </connections>
                             </barButtonItem>
                         </leftBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" systemItem="rewind" id="7V1-vU-EB1">
+                            <connections>
+                                <segue destination="gTW-L0-B7N" kind="show" id="mSs-NB-MaN"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="addButton" destination="lny-Hg-7sX" id="ndZ-6K-Kym"/>
+                        <outlet property="editButton" destination="N0o-ro-mHu" id="pKM-Or-WJn"/>
+                        <segue destination="3l6-fW-Fha" kind="show" identifier="AddUser" id="K89-by-GoH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V9N-Vb-6iI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -175,16 +184,16 @@
         <scene sceneID="9iF-jX-xUq">
             <objects>
                 <tableViewController id="3l6-fW-Fha" customClass="ModelViewController" customModule="PurpleHawkChat" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="wOT-fM-z4Q">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="52" sectionHeaderHeight="28" sectionFooterHeight="28" id="wOT-fM-z4Q">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="XhG-ei-PQL">
-                            <rect key="frame" x="0.0" y="64" width="375" height="198"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="231"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="InviteYour friend" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jEq-3c-VEt">
-                                    <rect key="frame" x="58" y="31" width="283" height="75"/>
+                                    <rect key="frame" x="58" y="80" width="283" height="75"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="283" id="baw-e6-XPB"/>
                                         <constraint firstAttribute="height" constant="75" id="n50-EY-56o"/>
@@ -194,7 +203,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RR7-nb-w7t">
-                                    <rect key="frame" x="83" y="114" width="235" height="30"/>
+                                    <rect key="frame" x="83" y="163" width="235" height="30"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="235" id="gBE-Nq-CF1"/>
                                         <constraint firstAttribute="height" constant="30" id="jcp-Kg-oK4"/>
@@ -204,17 +213,20 @@
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZsG-7G-ToZ">
-                                    <rect key="frame" x="182" y="160" width="37" height="30"/>
+                                    <rect key="frame" x="182" y="209" width="37" height="30"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="30" id="YUy-Rw-l4M"/>
                                         <constraint firstAttribute="width" constant="37" id="mcf-jf-Fra"/>
                                     </constraints>
                                     <state key="normal" title="Invite"/>
+                                    <connections>
+                                        <action selector="sendEmail:" destination="3l6-fW-Fha" eventType="touchUpInside" id="0t8-MZ-zWw"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
-                                <constraint firstItem="jEq-3c-VEt" firstAttribute="top" secondItem="XhG-ei-PQL" secondAttribute="top" constant="31" id="D4b-0d-Q1c"/>
+                                <constraint firstItem="jEq-3c-VEt" firstAttribute="top" secondItem="XhG-ei-PQL" secondAttribute="top" constant="80" id="D4b-0d-Q1c"/>
                                 <constraint firstItem="RR7-nb-w7t" firstAttribute="leading" secondItem="XhG-ei-PQL" secondAttribute="leading" constant="83" id="JmL-yL-gWJ"/>
                                 <constraint firstItem="ZsG-7G-ToZ" firstAttribute="top" secondItem="RR7-nb-w7t" secondAttribute="bottom" constant="16" id="KEE-gw-9Zg"/>
                                 <constraint firstItem="jEq-3c-VEt" firstAttribute="leading" secondItem="XhG-ei-PQL" secondAttribute="leading" constant="58" id="X1a-0b-sBa"/>
@@ -223,11 +235,11 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="SdJ-Z8-0LF">
-                                <rect key="frame" x="0.0" y="226" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="52" id="SdJ-Z8-0LF">
+                                <rect key="frame" x="0.0" y="259" width="375" height="52"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SdJ-Z8-0LF" id="Waz-hQ-lI4">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="51"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -265,23 +277,8 @@
             </objects>
             <point key="canvasLocation" x="845.60000000000002" y="-226.23688155922042"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="5Ii-w3-Ecu">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CaX-6g-xUF" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zU1-79-1Nh">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="3l6-fW-Fha" kind="relationship" relationship="rootViewController" id="C7y-qE-PfQ"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4m7-4b-88E" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2167.1999999999998" y="542.87856071964018"/>
-        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="mSs-NB-MaN"/>
+    </inferredMetricsTieBreakers>
 </document>

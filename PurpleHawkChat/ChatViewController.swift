@@ -28,6 +28,9 @@ class ChatViewController: JSQMessagesViewController {
 
     var email: String!
 
+    @IBOutlet weak var editButton: UIBarButtonItem!
+    @IBOutlet weak var addButton: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.senderId = senderDisplayName
@@ -35,6 +38,19 @@ class ChatViewController: JSQMessagesViewController {
         
         collectionView!.collectionViewLayout.incomingAvatarViewSize = CGSize.zero
         collectionView!.collectionViewLayout.outgoingAvatarViewSize = CGSize.zero
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        let adminRef = self.channelRef!.child("admin")
+        adminRef.observeSingleEvent(of: .value, with: { snapshot in
+            if(self.email == snapshot.value as? String) {
+                self.editButton?.isEnabled = true
+                self.addButton?.isEnabled = true
+            }else {
+                self.editButton?.isEnabled = false
+                self.addButton?.isEnabled = false
+            }
+        })
     }
 
     override func didReceiveMemoryWarning() {
@@ -154,7 +170,7 @@ class ChatViewController: JSQMessagesViewController {
     }
     
     @IBAction func removeUser(_ sender: Any) {
-        let alertController = UIAlertController( title:"Gender:", message:nil,preferredStyle:UIAlertControllerStyle.alert)
+        let alertController = UIAlertController( title:"Delete Any User From Chatroom:", message:nil,preferredStyle:UIAlertControllerStyle.alert)
         let userRef = channelRef!.child("users")
         userRef.observe(.childAdded, with: { (snapshot) -> Void in
             if(snapshot.value as! String! != self.email) {
@@ -175,10 +191,15 @@ class ChatViewController: JSQMessagesViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
-        let navVc = segue.destination as! UINavigationController
-        let chatVc = navVc.viewControllers.first as! ModelViewController
-        chatVc.channelRef = channelRef
-        chatVc.email = email
+        if(segue.identifier == "AddUser") {
+            let chatVc = segue.destination as! ModelViewController
+            chatVc.channelRef = channelRef
+            chatVc.email = email
+        }else {
+            let chatvc = segue.destination as! RoomListTableViewController
+            chatvc.email = email
+            chatvc.senderDisplayName = senderDisplayName
+        }
     }
     
     /*

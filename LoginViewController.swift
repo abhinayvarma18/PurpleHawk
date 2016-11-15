@@ -13,6 +13,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var email: UITextField!
 
     @IBOutlet weak var senderName: UITextField!
+    
+    private lazy var userRef: FIRDatabaseReference = FIRDatabase.database().reference().child("users")
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,6 +32,21 @@ class LoginViewController: UIViewController {
         
         channelVc.senderDisplayName = senderName?.text
         channelVc.email = email?.text
+        
+        userRef.observeSingleEvent(of: .value, with: { snapshot in
+            let emails = snapshot.value as! Dictionary<String, AnyObject>
+            var flag = true
+            for (_,value) in emails {
+                if(value as! String == self.email.text!) {
+                    flag = false
+                }
+            }
+            if(flag) {
+                let userNode = self.userRef.child((self.senderName?.text)! as String)
+                userNode.setValue(self.email?.text)
+            }
+        })
+        
     }
 
     @IBAction func loginAction(_ sender: Any) {

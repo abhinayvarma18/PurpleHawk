@@ -24,7 +24,7 @@ class RoomListTableViewController: UITableViewController {
             let channelItem = [
                 "id": name,
                 "users": emptyDict,
-                "admin": "",
+                "admin": email as Any,
                 "messages": ""
             ] as [String : Any]
             
@@ -69,7 +69,7 @@ class RoomListTableViewController: UITableViewController {
                 
                 let users = channelData["users"] as! Dictionary<String, AnyObject>
                 var flag = false
-                for (key,value) in users {
+                for (_,value) in users {
                     if(value as! String == self.email!){
                         flag = true
                     }

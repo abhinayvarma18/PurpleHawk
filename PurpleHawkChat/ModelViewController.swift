@@ -8,11 +8,12 @@
 
 import UIKit
 import Firebase
+import MessageUI
 
-class ModelViewController: UITableViewController {
+class ModelViewController: UITableViewController,MFMailComposeViewControllerDelegate {
     var channelRef: FIRDatabaseReference?
     var email: String!
-private lazy var userRef: FIRDatabaseReference = FIRDatabase.database().reference().child("users")
+    private lazy var userRef: FIRDatabaseReference = FIRDatabase.database().reference().child("users")
     @IBOutlet weak var user: UITextField!
     private var valueArray: [String] = []
     private var keyArray: [String] = []
@@ -20,12 +21,12 @@ private lazy var userRef: FIRDatabaseReference = FIRDatabase.database().referenc
     override func viewDidLoad() {
         super.viewDidLoad()
         self.channelRef!.child("users").observeSingleEvent(of: .value, with: { snapshot1 in
-            var channelUsers = snapshot1.value as! Dictionary<String, String>
+            let channelUsers = snapshot1.value as! Dictionary<String, String>
             self.userRef.observeSingleEvent(of: .value, with: { snapshot in
                 let channelData = snapshot.value as! Dictionary<String, AnyObject>
                 var flag = Bool(true)
                 for (key,value) in channelData {
-                    for (key1,value1) in channelUsers {
+                    for (_,value1) in channelUsers {
                         if(value as? String == value1) {
                             flag = false
                         }
@@ -36,12 +37,10 @@ private lazy var userRef: FIRDatabaseReference = FIRDatabase.database().referenc
                     }else{
                         flag = true
                     }
-                    
                 }
                 self.tableViewValue.reloadData()
             })
         })
-        
         // Do any additional setup after loading the view.
     }
     
@@ -77,17 +76,22 @@ private lazy var userRef: FIRDatabaseReference = FIRDatabase.database().referenc
         alert.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        super.prepare(for: segue, sender: sender)
-//    }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    
+    
+    @IBAction func sendEmail(_ sender: Any) {
+        let email = MFMailComposeViewController()
+        email.mailComposeDelegate = self
+        email.setSubject("Subject goes here")
+        email.setMessageBody("Some example text", isHTML: false)
+        email.setToRecipients(["abhinaycpian@gmail.com"]) // the recipient email address
+        if MFMailComposeViewController.canSendMail() {
+            present(email, animated: true, completion: nil)
+        }
     }
-    */
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        dismiss(animated: true, completion: nil)
+    }
 
 }
