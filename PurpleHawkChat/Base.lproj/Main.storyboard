@@ -127,11 +127,19 @@
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lpa-hu-dIf">
-                                            <rect key="frame" x="294" y="6" width="46" height="30"/>
+                                            <rect key="frame" x="249" y="6" width="46" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="Create"/>
                                             <connections>
                                                 <action selector="createRoom:" destination="gTW-L0-B7N" eventType="touchUpInside" id="7BP-Z5-in8"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a41-3P-NpI">
+                                            <rect key="frame" x="315" y="5" width="48" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Logout"/>
+                                            <connections>
+                                                <segue destination="bq3-EW-uNF" kind="presentation" id="tiB-er-Zzo"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -160,11 +168,13 @@
                             <outlet property="delegate" destination="gTW-L0-B7N" id="Hh1-VU-ucQ"/>
                         </connections>
                     </tableView>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="l5G-Cc-188"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bnH-wE-pqJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1784.8" y="-226.23688155922042"/>
+            <point key="canvasLocation" x="1805.5999999999999" y="-185.75712143928038"/>
         </scene>
         <!--Chat View Controller-->
         <scene sceneID="fdf-69-6Zn">
